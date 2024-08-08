@@ -1,0 +1,3 @@
+A voting platform web app called Liquid Democracy. The web app was created as the main project of the undergraduate course CS-359 (Web-Oriented Programming: https://www.csd.uoc.gr/~hy359/).
+
+The team consisted of two members (Dionysis Kalochristianakis and Anastasios Livanidis https://github.com/AlivasGR) and the work was more or less equally distributed. This repo is a public read-only copy of the original, created for showcasing examples of our work for CV purposes.

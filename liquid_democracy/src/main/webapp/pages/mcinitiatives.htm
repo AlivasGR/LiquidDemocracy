@@ -1,0 +1,20 @@
+<div id ="initiative_nav">
+    <input type ="text" id ="myinit_search" placeholder ="Search Initiative" onkeyup ="searchInitiative()"/>
+    <select id = "initpage_select" onchange = "
+            if (this.selectedIndex === 0) getInitiatives();
+            else if (this.selectedIndex === 1) getActiveInitiatives();
+            else if (this.selectedIndex === 2) getClosedInitiatives();">
+        <option value ="my_init" selected>My Initiatives</option>
+        <option value ="active_init">Active Initiatives</option>
+        <option value ="closed_init">Closed Initiatives</option>
+    </select>
+    <input type ="button" id = "newinitbutton" value ="Add Initiative" onclick ="sendAjaxGETfornav('2newinit')"/>
+</div>
+<div id ="initiative_list_container">
+    <div id ="initiative_list">
+    
+    </div>
+    <div class ="initiative_votes">
+
+    </div>
+</div>

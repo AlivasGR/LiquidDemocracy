@@ -1,0 +1,13 @@
+<form name ="loginmini" id ="barform" onsubmit ="validateLogin();">
+    <input type ="button" value ="Login" id = "submitmini" onclick = "sendAjaxPOSTlogmini()" tabindex = "3"/>
+    <img src ="css/camera.png" id ="camera_icon" alt ="cam" onclick = "camtoggler() === 1 ? faceRec.init('mini') : console.log('closed camera')"/>
+    <img src ="css/loading.gif" id ="loading_icon" alt ="..."/>
+    <input type ="password" placeholder ="password" id ="passmini" name ="passwordmini" required tabindex = "2"/>
+    <input type ="text" placeholder="username" id ="uidmini" name ="usernamemini" required tabindex = "1"/>
+    <div id ="cam">
+        <span id ="campop">
+            <video id='videomini' width='160' height='120' onclick = "camhider()" autoplay></video><br/>
+            <canvas id='canvasmini' width='160' height='120' style = "display: none"></canvas><br/>
+        </span>
+    </div>
+</form>

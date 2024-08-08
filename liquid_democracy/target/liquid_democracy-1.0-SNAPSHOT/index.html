@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Liquid Democracy</title>
+        <meta charset = "UTF-8" />
+        <meta name = "description" content = "Liquid Democracy member registration page" />
+        <meta name = "keywords" content = "Liquid,Democracy" />
+        <meta name = "author" content = "Anastasis Livanidis" />
+        <meta name ="viewport" content ="width=device-width, initial-scale=1"/>
+        <link rel = "shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel = "stylesheet" href = "css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src ="js/md5.min.js"></script>
+        <script src ="js/validation.js"></script>
+        <script src ="js/map.js"></script>
+        <script src ="js/face.js"></script>      
+    </head>
+    <body>
+        <div id ="Header-wrapper" onclick = "sendAjaxGETfornav('2home')">
+            <header id = "header">
+                <strong>Liquid Democracy</strong>
+            </header>
+        </div>
+        <div class = "nav" id ="navbar">
+            <div id ="navleft" class = "innernav">
+
+            </div>
+            <div id ="navcenter" class ="innernav">
+
+            </div>
+            <div id ="navright" class = "innernav">
+
+            </div>
+        </div>
+        <div class ="Container" id ="mastercontainer">
+
+        </div>
+        <hr/>
+        <div id ="footer">
+            <ul class = "copyright">
+                <li>&copy; 2017</li>
+                <li>Designed by Anastasis Livanidis.</li>
+                <li>All copyrights for media content belong to their respective owners.</li>
+            </ul>
+        </div>
+        <script>
+            sendAjaxPOSTchecklogin();
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC8h18fYcJQif8E6uftqT8ZUAeaeBMIjU&callback=geocodeAddress" type ="text/javascript">
+        </script>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNj8dgAL_VOPpLiUuLFbVx5IVaZ-g2HMg&libraries=visualization&callback=showHeatmap" type ="text/javascript">
+        </script>
+    </body>
+</html>

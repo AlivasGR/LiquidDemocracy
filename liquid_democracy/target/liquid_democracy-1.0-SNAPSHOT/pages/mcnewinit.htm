@@ -1,0 +1,9 @@
+<form name ="newinitform" id ="pageform">
+    <label for ="iid"><b>Initiative Title</b></label><br/>
+    <input type ="text" placeholder = "Enter Initiative Title" id ="iid" pattern ="[\w]{4,20}" name ="inittitle" required onblur = "validateInitTitle();"/><p class ="errmsg" id ="iidmsg"></p>
+    <label for ="icat"><b>Initiative Category</b></label><br/>
+    <input type ="text" placeholder = "Enter Initiative Category" id ="icat" pattern ="[\w]{4,20}" name ="initcat" required onblur="validateInitCat();"/><p class ="errmsg" id ="icatmsg"></p>
+    <label for ="idesc"><b>Initiative Description</b></label><br/>
+    <textarea id ="idesc" maxlength="5000" name ="initdesc" onblur = "validateInitDesc();"></textarea><p class ="errmsg" id ="idescmsg"></p>
+    <input type = "button" value ="Submit Initiative" id ="isubmit" onclick ="sendAjaxPOSTnewinit()"/>
+</form>

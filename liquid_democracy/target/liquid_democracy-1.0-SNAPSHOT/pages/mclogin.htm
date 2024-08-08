@@ -1,0 +1,24 @@
+<form name = "login" id = "pageform">
+    <div class ="Container" id ="mastercontainer">
+        <label for = "uid"><b>Username:</b></label><br/>
+        <input type="text" placeholder="Enter Username" id = "uid" name="username" pattern="[A-Za-z]{8,}" required/><br/><p class = "errmsg" id ="uidmsg"></p>
+        <p id ="facealt">If you would like to login using face recognition try logging in from a PC</p>
+        <p id ="faceresult"></p>
+        <div id = "facecont">
+            <span class = "facebutton"><input type ="radio" id = "phen" name ="facecontroller" value ="Enable Facial Recognition" onclick = "document.getElementById('faceactual').style.display = 'block'"/>Enable Facial Recognition</span>
+            <span class = "facebutton"><input type ="radio" id = "phdis" name ="facecontroller" value ="Disable Facial Recogntition" onclick = "document.getElementById('faceactual').style.display = 'none'" checked/>Disable Facial Recognition</span>
+            <div id ="faceactual">
+                <video id='video' width='640' height='480' autoplay></video><br/>
+                <input type='button' id="snap" value ='Take Photo'>
+                <input type='button' id="upload" value ='Upload Image'><br/>
+                <canvas id='canvas' width='640' height='480'></canvas><br/>
+                <script>
+                    faceRec.init();
+                </script>
+            </div>
+        </div><br/>
+        <label for = "pass1"><b>Password:</b></label><br/>
+        <input type="password" placeholder = "Enter Password" id = "pass1" name ="password" pattern ="(?=^.{8,10}$)(?=.*[^a-zA-Z0-9])(?=.*[a-zA-Z])(?=.*[0-9]).*$" required /><br/><p class = "errmsg" id ="pwdmsg"></p>
+        <input type="button" value="Login" id = "submitbutton" onclick = "sendAjaxPOSTlog()"/><br/>
+    </div>
+</form>
